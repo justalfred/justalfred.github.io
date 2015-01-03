@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="/drafts/getting-started-with-pelican-on-github-pages.html">
+<link rel="canonical" href="http://blog.justalfred.com/drafts/getting-started-with-pelican-on-github-pages.html">
 
         <meta name="author" content="Just Alfred" />
         <meta name="keywords" content="pelican,publishing" />
@@ -22,14 +22,18 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://blog.justalfred.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://blog.justalfred.com/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+    <link href="http://blog.justalfred.com/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.justalfred.com/theme/css/style.css" type="text/css"/>
+
+        <link href="http://blog.justalfred.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Just Alfred ATOM Feed"/>
 
 
-
+        <link href="http://blog.justalfred.com/feeds/programming.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Just Alfred programming ATOM Feed"/>
 
 </head>
 <body>
@@ -43,17 +47,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">
+            <a href="http://blog.justalfred.com/" class="navbar-brand">
 Just Alfred            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
-                            <a href="/category/misc.html">Misc</a>
+                            <a href="http://blog.justalfred.com/category/misc.html">Misc</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+                <li><a href="http://blog.justalfred.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -68,7 +72,7 @@ Just Alfred            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/drafts/getting-started-with-pelican-on-github-pages.html"
+                    <a href="http://blog.justalfred.com/drafts/getting-started-with-pelican-on-github-pages.html"
                        rel="bookmark"
                        title="Permalink to Getting Started with Pelican on Github Pages">
                         Getting Started with Pelican on Github Pages
@@ -81,7 +85,7 @@ Just Alfred            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-01-02T00:00:00+01:00"> Fri 02 January 2015</time>
+        <i class="fa fa-calendar"></i><time datetime="2015-01-02T00:00:00-05:00"> Fri 02 January 2015</time>
     </span>
 
 
@@ -90,9 +94,9 @@ Just Alfred            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/pelican.html">pelican</a>
+	<a href="http://blog.justalfred.com/tag/pelican.html">pelican</a>
         /
-	<a href="/tag/publishing.html">publishing</a>
+	<a href="http://blog.justalfred.com/tag/publishing.html">publishing</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -185,7 +189,10 @@ domain/drafts/slug.html</p>
 git init
 output</p>
 <h1>Custom Domain</h1>
-<p>CNAME</p>
+<p>CNAME in /content/extra
+pelicanconf.py:
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}</p>
 <h1>Pelican Themes</h1>
 <p>pelicanconf.py</p>
 <div class="highlight"><pre><span class="nv">THEME</span> <span class="o">=</span> <span class="s1">&#39;../pelican-themes/pelican-bootstrap3&#39;</span>
@@ -197,6 +204,8 @@ output</p>
 <p>publishconf.py
 Delete output
 GA</p>
+<p>push
+dns change in namecheap</p>
 <h1>Import old blog</h1>
 <p>Blogger XML export</p>
 <div class="highlight"><pre>pelican-import -m markdown --feed --dir-page blog___.xml --dir-cat
@@ -221,10 +230,10 @@ GA</p>
 
 
 
-                <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <li class="list-group-item"><a href="http://blog.justalfred.com/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                     <ul class="list-group " id="tags">
                         <li class="list-group-item tag-4">
-                            <a href="/tag/info.html">
+                            <a href="http://blog.justalfred.com/tag/info.html">
                                 info
                             </a>
                         </li>
@@ -275,13 +284,30 @@ GA</p>
       </div>
    </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+<script src="http://blog.justalfred.com/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+<script src="http://blog.justalfred.com/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+<script src="http://blog.justalfred.com/theme/js/respond.min.js"></script>
 
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-58159452-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
 </body>
 </html>

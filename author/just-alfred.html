@@ -20,17 +20,19 @@
         <meta property="og:site_name" content="Just Alfred" />
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="Just Alfred"/>
-        <meta property="og:url" content=""/>
+        <meta property="og:url" content="http://blog.justalfred.com"/>
         <meta property="og:description" content="Just Alfred"/>
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://blog.justalfred.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://blog.justalfred.com/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+    <link href="http://blog.justalfred.com/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.justalfred.com/theme/css/style.css" type="text/css"/>
 
+        <link href="http://blog.justalfred.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Just Alfred ATOM Feed"/>
 
 
 
@@ -46,17 +48,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">
+            <a href="http://blog.justalfred.com/" class="navbar-brand">
 Just Alfred            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
-                            <a href="/category/misc.html">Misc</a>
+                            <a href="http://blog.justalfred.com/category/misc.html">Misc</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+                <li><a href="http://blog.justalfred.com/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -68,9 +70,9 @@ Just Alfred            </a>
         <div class="col-sm-9">
 
             <article>
-                <h2><a href="/introduction.html">Introduction</a></h2>
+                <h2><a href="http://blog.justalfred.com/introduction.html">Introduction</a></h2>
                 <div class="summary"><p>Welcome to my new blog.</p>
-                    <a class="btn btn-default btn-xs" href="/introduction.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="http://blog.justalfred.com/introduction.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -90,10 +92,10 @@ Just Alfred            </a>
 
 
 
-                <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <li class="list-group-item"><a href="http://blog.justalfred.com/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                     <ul class="list-group " id="tags">
                         <li class="list-group-item tag-4">
-                            <a href="/tag/info.html">
+                            <a href="http://blog.justalfred.com/tag/info.html">
                                 info
                             </a>
                         </li>
@@ -144,13 +146,30 @@ Just Alfred            </a>
       </div>
    </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+<script src="http://blog.justalfred.com/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+<script src="http://blog.justalfred.com/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+<script src="http://blog.justalfred.com/theme/js/respond.min.js"></script>
 
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-58159452-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
 </body>
 </html>

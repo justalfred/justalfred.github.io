@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Getting Started with Pelican on Github Pages - Just Alfred</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/drafts/getting-started-with-pelican-on-github-pages.html">
+
+        <meta name="author" content="Just Alfred" />
+        <meta name="keywords" content="pelican,publishing" />
+        <meta name="description" content="How I got this site started" />
+
+    <!-- Enable latex plugin -->
+
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Just Alfred            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/misc.html">Misc</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/drafts/getting-started-with-pelican-on-github-pages.html"
+                       rel="bookmark"
+                       title="Permalink to Getting Started with Pelican on Github Pages">
+                        Getting Started with Pelican on Github Pages
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-01-02T00:00:00+01:00"> Fri 02 January 2015</time>
+    </span>
+
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">pelican</a>
+        /
+	<a href="/tag/publishing.html">publishing</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>I want more people to blog.
+I want people to give voice to their experiences.
+Especially those people who think they have nothing to say.
+It's not that I think we need more noise on the internet.
+It's that the conversations out there are often dominated by a few loud voices that are often not representative of the masses.
+If </p>
+<p>There are various guides out there that show how easy it is to get started publishing with <code>pelican</code>.
+My problem is that I don't like uncertainty.
+What are all these auto-generated files for?
+How do I customize the look and organization?
+How can I be sure I don't expose more information than I want?
+Because of my insecurity, it took me a lot longer to get started than I wanted.
+Here is my summary of the steps I ended up taking, and an explanation of what each step does.
+Hopefully this will save the reader time bouncing around various tutorials, blog posts, and documentation.</p>
+<h1>Intent</h1>
+<p>I've only just started using pelican, so I can only speak to what I've done so far.
+I wanted a blog which allows me to draft in markdown. I didn't want to pay much money, and I wanted to avoid having to serve a website. After a few months of indecision, I settled on using pelican to generate a static website which I would put on Github Pages. Pelican has the advantage of being well supported and in a language that I like (Python). Github Pages is free and allows me to use a custom domain. I guess that's just a vanity feature.</p>
+<h1>Pelican</h1>
+<p>What is it?</p>
+<h1>Install</h1>
+<p>So let's get started.
+You can create a new python virtual environment if you want.
+If you're sloppy and lazy like me, just go ahead and install a few packages.</p>
+<div class="highlight"><pre>pip install pelican markdown typogrify
+</pre></div>
+
+
+<p>Markdown and typogrify </p>
+<h1>Generate the initial boilerplate</h1>
+<div class="highlight"><pre><span class="nv">$ </span>pelican-quickstart
+
+
+Welcome to pelican-quickstart v3.5.0.
+
+This script will <span class="nb">help </span>you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+
+&gt; Where <span class="k">do</span> you want to create your new web site? <span class="o">[</span>.<span class="o">]</span> 
+&gt; What will be the title of this web site? Just Alfred
+&gt; Who will be the author of this web site? Just Alfred
+&gt; What will be the default language of this web site? <span class="o">[</span>en<span class="o">]</span> 
+&gt; Do you want to specify a URL prefix? e.g., http://example.com   <span class="o">(</span>Y/n<span class="o">)</span> 
+&gt; What is your URL prefix? <span class="o">(</span>see above example<span class="p">;</span> no trailing slash<span class="o">)</span> http://blog.justalfred.com 
+&gt; Do you want to <span class="nb">enable </span>article pagination? <span class="o">(</span>Y/n<span class="o">)</span> 
+&gt; How many articles per page <span class="k">do</span> you want? <span class="o">[</span>10<span class="o">]</span> 
+&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? <span class="o">(</span>Y/n<span class="o">)</span> 
+&gt; Do you want an auto-reload <span class="p">&amp;</span> simpleHTTP script to assist with theme and site development? <span class="o">(</span>Y/n<span class="o">)</span> 
+&gt; Do you want to upload your website using FTP? <span class="o">(</span>y/N<span class="o">)</span> 
+&gt; Do you want to upload your website using SSH? <span class="o">(</span>y/N<span class="o">)</span> 
+&gt; Do you want to upload your website using Dropbox? <span class="o">(</span>y/N<span class="o">)</span> 
+&gt; Do you want to upload your website using S3? <span class="o">(</span>y/N<span class="o">)</span> 
+&gt; Do you want to upload your website using Rackspace Cloud Files? <span class="o">(</span>y/N<span class="o">)</span> 
+&gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
+&gt; Is this your personal page <span class="o">(</span>username.github.io<span class="o">)</span>? <span class="o">(</span>y/N<span class="o">)</span> y
+Done. Your new project is available at <span class="nv">$SOME_DIR</span>
+</pre></div>
+
+
+<p>New files
+<em> develop_server.sh
+</em> Makefile
+<em> pelicanconf.py
+</em> content
+<em> fabfile.py
+</em> output
+* publishconf.py</p>
+<h1>First article</h1>
+<p>Article vs. page</p>
+<p>boilerplate</p>
+<p>convert
+pelican content
+make html</p>
+<p>serve
+python -m SimpleHTTPServer
+make serve</p>
+<p>both
+make devserver
+./develop_server.sh stop</p>
+<p>note about drafts:
+Status: draft
+domain/drafts/slug.html</p>
+<h1>Version Control</h1>
+<p>gitignore
+git init
+output</p>
+<h1>Custom Domain</h1>
+<p>CNAME</p>
+<h1>Pelican Themes</h1>
+<p>pelicanconf.py</p>
+<div class="highlight"><pre><span class="nv">THEME</span> <span class="o">=</span> <span class="s1">&#39;../pelican-themes/pelican-bootstrap3&#39;</span>
+</pre></div>
+
+
+<p>time zone</p>
+<h1>Publish</h1>
+<p>publishconf.py
+Delete output
+GA</p>
+<h1>Import old blog</h1>
+<p>Blogger XML export</p>
+<div class="highlight"><pre>pelican-import -m markdown --feed --dir-page blog___.xml --dir-cat
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="#"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg"></i> You can add links in your config file</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fa fa-another-social-link-square fa-lg"></i> Another social link</a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group " id="tags">
+                        <li class="list-group-item tag-4">
+                            <a href="/tag/info.html">
+                                info
+                            </a>
+                        </li>
+                    </ul>
+                </li>    
+
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="#" target="_blank">
+                You can modify those links in your config file
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 Just Alfred
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>

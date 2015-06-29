@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><atom:link href="http://blog.justalfred.com/feeds/drafts.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 24 Jun 2015 09:00:00 -0400</lastBuildDate><item><title>Installing Arch Linux on an ASUS Zenbook UX305FA</title><link>http://blog.justalfred.com/arch-linux-asus-ux305fa.html</link><description>&lt;p&gt;&lt;em&gt;Originally published at: &lt;a href="http://kwontum.blogspot.com/2013/10/does-not-compute.html"&gt;http://kwontum.blogspot.com/2013/10/does-not-compute.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;#8217;s talk about language. How amazing is it that using sounds or
+symbols, we can implant in another person&amp;#8217;s mind an entirely new state?
+We can describe a place that person has never seen, we can construct a
+belief that person has never considered, we can convey an emotion that
+person has never&amp;nbsp;felt.  &lt;/p&gt;
+&lt;p&gt;But not without errors in transmission. Remember the game, &amp;#8220;telephone&amp;#8221;?
+Why can&amp;#8217;t language be more precise? Let me try to explain this in an
+unconventional way and see what it means for programming languages.&lt;br /&gt;
+&lt;a name="more"&gt;&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;Imagine a language in which the intent of the communicator is completely
+unambiguous to a qualified listener. I&amp;#8217;ll use &lt;span class="caps"&gt;CD&lt;/span&gt; audio recordings as an
+illustration. With good enough equipment, a listener can hear a
+soundscape that is indistinguishable from the&amp;nbsp;original.  &lt;/p&gt;
+&lt;p&gt;But most people don&amp;#8217;t listen to CDs anymore. They listen to streaming or
+downloaded music. The major difference is that these recordings are
+compressed. Those parts of the audio signal that people can&amp;#8217;t hear well
+are removed. This leads to degradation of the signal, but much, much
+less information is required while most people never notice. So it&amp;#8217;s a
+worthwhile tradeoff. In fact, there&amp;#8217;s a whole class of &lt;a href="http://en.wikipedia.org/wiki/Category:Probabilistic_data_structures"&gt;probabilistic
+data
+structures&lt;/a&gt; in
+computer science that sacrifice accuracy for performance and&amp;nbsp;size.  &lt;/p&gt;
+&lt;p&gt;Likewise, human languages have each been reduced to use only a subset of
+all possible
+&lt;a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet"&gt;sounds&lt;/a&gt;
+and symbols. Take the word, &amp;#8220;hot&amp;#8221;. Here&amp;#8217;s a list of things that can be
+described as hot: fire, chile pepper, horseradish, supermodel,
+basketball player, a fashion trend, the color of a room. In English, we
+use this single, overloaded word to represent this array of meanings.
+Yet we&amp;#8217;re rarely confused due to our evolved talents for lexical
+ambiguity resolution (as so wonderfully explained by my new colleague
+&lt;a href="http://jennazeigen.com/lexical.jpg"&gt;here&lt;/a&gt;).  &lt;/p&gt;
+&lt;p&gt;In other words, when a word can take multiple meanings, we&amp;#8217;re
+terrifically adept at taking context into account to disambiguate the
+intended meaning. This permits us to compress our language into a
+manageable size. More importantly, it permits us to be sloppy. The
+sentence, &amp;#8220;I ain&amp;#8217;t git no donuts, but I gotta coke,&amp;#8221; is completely
+understandable despite all the&amp;nbsp;errors.  &lt;/p&gt;
+&lt;p&gt;Computers aren&amp;#8217;t like us. Computers are purely logical units that
+mindlessly apply instructions to data because they have no governing
+mind. At the processor level, they have no innate capacity to correct
+erroneous instructions or to resolve ambiguities. This is what makes
+coding hard. A sentence like &amp;#8220;Come to the kitchen&amp;#8221; is perfectly
+understandable to us since we can guess there is supposed to be a period
+at the end to indicate the sentence has ended. A computer would say the
+sentence never finished so the instruction cannot be
+processed. (Interestingly, there are companies that hire adults with
+autism or Asperger&amp;#8217;s since they are often exceptional at handling and
+debugging&amp;nbsp;code.)  &lt;/p&gt;
+&lt;p&gt;For the beginning programmer, I think this is an obvious, but useful
+insight. Sort of like realizing the center squares of a Rubik&amp;#8217;s cube
+don&amp;#8217;t move: those center squares cease to be puzzle pieces and become
+stationary references to guide your manipulations. The stupid silicon
+insight sets an exacting reference from which one can evaluate one&amp;#8217;s own
+code. Instead of wondering why the dumb computer didn&amp;#8217;t get what he was
+(not) clearly telling it to do, the novice can expend that brainpower on
+avoiding the typos and syntax errors whose importance he now&amp;nbsp;understands.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Wed, 24 Jun 2015 09:00:00 -0400</pubDate><guid>tag:blog.justalfred.com,2015-06-24:arch-linux-asus-ux305fa.html</guid><category>Code</category></item><item><title>Getting Started with Pelican on Github Pages</title><link>http://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html</link><description>&lt;p&gt;I want more people to blog.
+I want more people to give voice to their experiences.
+Especially those people who think they have nothing to say.
+It&amp;#8217;s not that I think we need more noise on the internet.
+It&amp;#8217;s that the conversations out there are often dominated by a few loud voices that are often not representative of the masses.
+It&amp;#8217;s that sometimes the most helpful thing for you to hear is that someone out there has gone through what you&amp;#8217;re going through and can tell you something about the experience.
+I want more people to&amp;nbsp;blog.&lt;/p&gt;
+&lt;p&gt;There are various guides out there that show how easy it is to get started publishing with Pelican.
+My problem is that I don&amp;#8217;t like uncertainty.
+What are all these auto-generated files for?
+How do I customize the look and organization?
+How can I be sure I don&amp;#8217;t expose more information than I want?
+Because of my insecurity, it took me a lot longer to get started than I wanted.
+Here is my summary of the steps I ended up taking, and an explanation of what each step does.
+Hopefully this will save the reader time bouncing around various tutorials, blog posts, and&amp;nbsp;documentation.&lt;/p&gt;
+&lt;h1&gt;Intent&lt;/h1&gt;
+&lt;p&gt;I wanted a blogging platform which allows me to draft in markdown.
+I didn&amp;#8217;t want to pay much money, and I wanted to avoid having to serve a website.
+After a few months of indecision, I settled on using Pelican to generate a static website which I would host on Github Pages.
+Pelican has the advantage of being well supported and in a language that I like (Python).
+Github Pages is free and allows me to use a custom domain.
+I set everything up at the start of January, and haven&amp;#8217;t touched it since.
+So this is my best recollection of how I got&amp;nbsp;started.&lt;/p&gt;
+&lt;h1&gt;Pelican&lt;/h1&gt;
+&lt;p&gt;If you&amp;#8217;re not familiary with the terminology so far, Pelican is a Python library that lets you generate static websites from templates.
+By static, we mean that the content served is the same for everyone because it&amp;#8217;s generated in advance.
+Blogs are typically static while ecommerce sites (where you login, have an account, order history, etc.) are typically not.
+Templates save the blogger from having to muck about with verbose &lt;span class="caps"&gt;HTML&lt;/span&gt;.
+&lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt; and &lt;a href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt; are two templating formats that Pelican handles well.
+As an example, Markdown lets you write: &lt;code&gt;[a link](http://blog.justalfred.com)&lt;/code&gt; instead of: &lt;code&gt;&amp;lt;a href="https://blog.justalfred.com"&amp;gt;a link&amp;lt;/a&amp;gt;&lt;/code&gt;.
+Pelican itself is highly customizable and extensible.
+You&amp;#8217;ll want to be somewhat familiar with Python and git to have an easy time following along.
+I&amp;#8217;ve been working in Arch Linux, but these instructions will probably work in &lt;span class="caps"&gt;OSX&lt;/span&gt; as well.
+Windows users will have to interpret the commands and paths&amp;nbsp;accordingly.&lt;/p&gt;
+&lt;h1&gt;Install&lt;/h1&gt;
+&lt;p&gt;So let&amp;#8217;s get started.
+You can create a new python virtual environment if you want.
+If you&amp;#8217;re sloppy and lazy like me, just go ahead and install a few&amp;nbsp;packages.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pip install pelican Markdown typogrify
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Markdown and&amp;nbsp;typogrify &lt;/p&gt;
+&lt;h1&gt;Generate the initial&amp;nbsp;boilerplate&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pelican-quickstart
+
+
+Welcome to pelican-quickstart v3.5.0.
+
+This script will &lt;span class="nb"&gt;help &lt;/span&gt;you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+
+&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt; 
+&amp;gt; What will be the title of this web site? Just Alfred
+&amp;gt; Who will be the author of this web site? Just Alfred
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;en&lt;span class="o"&gt;]&lt;/span&gt; 
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; What is your URL prefix? &lt;span class="o"&gt;(&lt;/span&gt;see above example&lt;span class="p"&gt;;&lt;/span&gt; no trailing slash&lt;span class="o"&gt;)&lt;/span&gt; http://blog.justalfred.com 
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable &lt;/span&gt;article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;10&lt;span class="o"&gt;]&lt;/span&gt; 
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; 
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at &lt;span class="nv"&gt;$SOME_DIR&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;At this point, you can navigate to the folder where Pelican guides you (&lt;code&gt;$SOME_DIR&lt;/code&gt;) and find the following new files and&amp;nbsp;folders:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;develop_server.sh - This is a very useful shell script for seeing the effects of your&amp;nbsp;updates&lt;/li&gt;
+&lt;li&gt;Makefile - This file defines &lt;code&gt;make&lt;/code&gt; commands that perform the most important&amp;nbsp;tasks&lt;/li&gt;
+&lt;li&gt;pelicanconf.py - This file contains settings to customize your&amp;nbsp;site&lt;/li&gt;
+&lt;li&gt;publishconf.py - This file contains settings that only used when you&amp;#8217;re ready to publish to the&amp;nbsp;web&lt;/li&gt;
+&lt;li&gt;content/ - This folder is where you&amp;#8217;ll put the templates and files that will become the content of your&amp;nbsp;site&lt;/li&gt;
+&lt;li&gt;output/ - This folder might not exist until you convert your content into&amp;nbsp;html&lt;/li&gt;
+&lt;li&gt;fabfile.py - This has something to do with &lt;a href="http://www.fabfile.org/"&gt;fabric&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some of these are discussed in further detail&amp;nbsp;later.&lt;/p&gt;
+&lt;h1&gt;First&amp;nbsp;article&lt;/h1&gt;
+&lt;p&gt;Article vs.&amp;nbsp;page&lt;/p&gt;
+&lt;p&gt;boilerplate&lt;/p&gt;
+&lt;p&gt;convert
+pelican content
+make&amp;nbsp;html&lt;/p&gt;
+&lt;p&gt;serve
+python -m SimpleHTTPServer
+make&amp;nbsp;serve&lt;/p&gt;
+&lt;p&gt;both
+make devserver
+./develop_server.sh&amp;nbsp;stop&lt;/p&gt;
+&lt;p&gt;note about drafts:
+Status: draft&amp;nbsp;domain/drafts/slug.html&lt;/p&gt;
+&lt;h1&gt;Version&amp;nbsp;Control&lt;/h1&gt;
+&lt;p&gt;gitignore
+git init&amp;nbsp;output&lt;/p&gt;
+&lt;h1&gt;Custom&amp;nbsp;Domain&lt;/h1&gt;
+&lt;p&gt;&lt;span class="caps"&gt;CNAME&lt;/span&gt; in /content/extra
+pelicanconf.py:
+STATIC_PATHS = [&amp;#8216;images&amp;#8217;, &amp;#8216;extra/&lt;span class="caps"&gt;CNAME&lt;/span&gt;&amp;#8217;]
+EXTRA_PATH_METADATA = {&amp;#8216;extra/&lt;span class="caps"&gt;CNAME&lt;/span&gt;&amp;#8217;: {&amp;#8216;path&amp;#8217;: &amp;#8216;&lt;span class="caps"&gt;CNAME&lt;/span&gt;&amp;#8217;},}&lt;/p&gt;
+&lt;h1&gt;robots.txt&lt;/h1&gt;
+&lt;p&gt;similar to&amp;nbsp;cname&lt;/p&gt;
+&lt;h1&gt;Pelican&amp;nbsp;Themes&lt;/h1&gt;
+&lt;p&gt;pelicanconf.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;../pelican-themes/pelican-bootstrap3&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;time&amp;nbsp;zone&lt;/p&gt;
+&lt;h1&gt;Publish&lt;/h1&gt;
+&lt;p&gt;publishconf.py
+Delete output
+&lt;span class="caps"&gt;GA&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;make publish
+push
+dns change in&amp;nbsp;namecheap&lt;/p&gt;
+&lt;h1&gt;Import old&amp;nbsp;blog&lt;/h1&gt;
+&lt;p&gt;Blogger &lt;span class="caps"&gt;XML&lt;/span&gt;&amp;nbsp;export&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pelican-import -m markdown --feed --dir-page blog___.xml --dir-cat
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Fri, 02 Jan 2015 00:00:00 -0500</pubDate><guid>tag:blog.justalfred.com,2015-01-02:getting-started-with-pelican-on-github-pages.html</guid><category>Code</category></item></channel></rss>

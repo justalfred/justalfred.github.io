@@ -161,7 +161,7 @@ Windows users will have to interpret the commands and paths&nbsp;accordingly.</p
 <p>So let&#8217;s get started.
 You can create a new python virtual environment if you want.
 If you&#8217;re sloppy and lazy like me, just go ahead and install a few&nbsp;packages.</p>
-<div class="highlight"><pre>$ pip install pelican Markdown typogrify
+<div class="highlight"><pre><span></span>$ pip install pelican Markdown typogrify
 </pre></div>
 
 
@@ -175,7 +175,7 @@ If you mess up, you can delete the generated folder and just start right over.
 For most of the prompts, you can just accept the default.
 For most of the rest, you can always change those settings later if you change your mind.
 In particular, though, I strongly recommend generating the&nbsp;Makefile.</p>
-<div class="highlight"><pre>$ pelican-quickstart
+<div class="highlight"><pre><span></span>$ pelican-quickstart
 
 
 Welcome to pelican-quickstart v3.5.0.
@@ -203,7 +203,7 @@ needed by Pelican.
 &gt; Do you want to upload your website using Rackspace Cloud Files? <span class="o">(</span>y/N<span class="o">)</span> 
 &gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
 &gt; Is this your personal page <span class="o">(</span>username.github.io<span class="o">)</span>? <span class="o">(</span>y/N<span class="o">)</span> y
-Done. Your new project is available at $SOME_DIR
+Done. Your new project is available at <span class="nv">$SOME_DIR</span>
 </pre></div>
 
 
@@ -225,7 +225,7 @@ Articles are the main content of your site, like blog posts.
 Pages are relatively static, like &#8216;about&#8217; or &#8216;contact&#8217; pages.
 Let&#8217;s start with one of&nbsp;each.</p>
 <p>Create a folder, <code>content/pages/</code>, make a new file called, <code>about.md</code>, and give it the following&nbsp;contents:</p>
-<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">About</span>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">About</span>
 <span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
 
 <span class="n">Bonjour</span><span class="o">,</span> <span class="n">wilkommen</span> <span class="n">a</span> <span class="n">kono</span> <span class="n">blog</span><span class="o">.</span>
@@ -234,7 +234,7 @@ Let&#8217;s start with one of&nbsp;each.</p>
 
 <p>You can (should) replace all of that with the relevant information that you would like to have&nbsp;displayed.</p>
 <p>Next, create a file called, <code>content/test.md</code>, and give it the following&nbsp;contents:</p>
-<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">Test</span> <span class="n">Post</span>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Test</span> <span class="n">Post</span>
 <span class="n">Date</span><span class="o">:</span> <span class="mi">1997</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">29</span> <span class="mi">02</span><span class="o">:</span><span class="mi">14</span>
 <span class="n">Tags</span><span class="o">:</span> <span class="n">testtag</span>
 <span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
@@ -281,7 +281,7 @@ If this part isn&#8217;t clear to you, feel free to email or tweet at me, and I&
 First, create a file called <code>CNAME</code> in a new folder, <code>/content/extra</code>.
 Edit the file so the only contents are the domain you want to use, e.g.: <code>blog.justalfred.com</code>.
 Next, edit your <code>pelicanconf.py</code> to add the following&nbsp;lines:</p>
-<div class="highlight"><pre><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
 <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">},}</span>
 </pre></div>
 
@@ -294,20 +294,20 @@ Of course, there&#8217;s nothing special about the folder, <code>extra/</code>, 
 This <a href="http://www.robotstxt.org/robotstxt.html">establishes a policy</a> that web crawlers are recommended to follow.
 The major ones will respect your settings.
 Mine has the following&nbsp;contents:</p>
-<div class="highlight"><pre>User-agent: *
+<div class="highlight"><pre><span></span>User-agent: *
 Disallow: /drafts/
 Disallow: /theme/
 </pre></div>
 
 
 <p>If you didn&#8217;t follow the last portion, you will have to add the following to your <code>pelicanconf.py</code>:</p>
-<div class="highlight"><pre><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">]</span>
 <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;robots.txt&#39;</span><span class="p">},}</span>
 </pre></div>
 
 
 <p>If you did, edit the relevant lines&nbsp;to:</p>
-<div class="highlight"><pre><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">]</span>
 <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">},</span>
                        <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;robots.txt&#39;</span><span class="p">},</span>
                <span class="p">}</span>
@@ -317,7 +317,7 @@ Disallow: /theme/
 <h1>Typogrify</h1>
 <p>If you chose to install <code>typogrify</code> earlier, you&#8217;ll want to enable it.
 Add the following to your <code>pelicanconf.py</code>:</p>
-<div class="highlight"><pre><span class="n">TYPOGRIFY</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="highlight"><pre><span></span><span class="n">TYPOGRIFY</span> <span class="o">=</span> <span class="bp">True</span>
 </pre></div>
 
 
@@ -327,7 +327,7 @@ I chose the &#8216;<a href="https://github.com/getpelican/pelican-themes/tree/ma
 It has a minimalist aeshthetic, it&#8217;s responsive, it recognizes a host of extra settings.
 It can be further customized by editing a custom <span class="caps">CSS</span> file as described <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3#custom-css">here</a>, but I haven&#8217;t gotten around to that.
 Whichever theme you choose, clone the &#8216;pelican-themes&#8217; repo, and add the following to your <code>pelicanconf.py</code>:</p>
-<div class="highlight"><pre>THEME = &#39;path/to/pelican-themes/chosen-theme&#39;
+<div class="highlight"><pre><span></span>THEME = &#39;path/to/pelican-themes/chosen-theme&#39;
 </pre></div>
 
 
@@ -335,7 +335,7 @@ Whichever theme you choose, clone the &#8216;pelican-themes&#8217; repo, and add
 <p>You will probably want to set the time zone that your site uses.
 This <a href="http://docs.getpelican.com/en/latest/settings.html#timezone">seems</a> to be mostly important if you set up <span class="caps">RSS</span> or Atom feeds later on (which I recommend; I love <span class="caps">RSS</span>).
 Simply add the following to your <code>pelicanconf.py</code> with the appropriate time&nbsp;zone:</p>
-<div class="highlight"><pre><span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/New_York&#39;</span>
+<div class="highlight"><pre><span></span><span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/New_York&#39;</span>
 </pre></div>
 
 
@@ -344,12 +344,12 @@ Simply add the following to your <code>pelicanconf.py</code> with the appropriat
 For instance, you probably don&#8217;t want to include Google Analytics tracking in your draft versions of your site; only in the version that you finally&nbsp;publish.</p>
 <p>Speaking of it, the first thing you&#8217;ll want to add is probably Google Analytics tracking.
 Add the tracking id to <code>publishconf.py</code>:</p>
-<div class="highlight"><pre><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="s2">&quot;UA-XXXXXXXX-X&quot;</span>
+<div class="highlight"><pre><span></span><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="s2">&quot;UA-XXXXXXXX-X&quot;</span>
 </pre></div>
 
 
 <p>If you want to generate an <span class="caps">RSS</span> feed (some of us still use <span class="caps">RSS</span>) you can do that quite simply&nbsp;here:</p>
-<div class="highlight"><pre><span class="n">FEED_DOMAIN</span> <span class="o">=</span> <span class="n">SITEURL</span>
+<div class="highlight"><pre><span></span><span class="n">FEED_DOMAIN</span> <span class="o">=</span> <span class="n">SITEURL</span>
 <span class="n">FEED_ALL_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.rss.xml&#39;</span>
 <span class="n">CATEGORY_FEED_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/</span><span class="si">%s</span><span class="s1">.rss.xml&#39;</span>
 </pre></div>
@@ -371,7 +371,7 @@ You can then simply push your content to the master branch of that repo, and wai
 <p>Since I was migrating posts out of Blogger, I did this in a three-step process.
 First, I used Blogger&#8217;s <a href="https://support.google.com/blogger/answer/97416?hl=en">export <span class="caps">XML</span> functionality</a> to retrieve my content.
 Second, I ran the following command to convert the <span class="caps">XML</span> to&nbsp;Markdown.</p>
-<div class="highlight"><pre>pelican-import -m markdown --feed --dir-page blog___.xml --dir-cat
+<div class="highlight"><pre><span></span>pelican-import -m markdown --feed --dir-page blog___.xml --dir-cat
 </pre></div>
 
 
@@ -416,18 +416,13 @@ Happy&nbsp;Blogging!</p>
             <li class="list-group-item"><a href="http://blog.justalfred.com/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://blog.justalfred.com/tag/music.html">
-                            Music
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
                         <a href="http://blog.justalfred.com/tag/the-classical-kwontum-interface.html">
                             The Classical-Kwontum Interface
                         </a>
                     </li>
-                    <li class="list-group-item tag-2">
-                        <a href="http://blog.justalfred.com/tag/humans.html">
-                            humans
+                    <li class="list-group-item tag-1">
+                        <a href="http://blog.justalfred.com/tag/music.html">
+                            Music
                         </a>
                     </li>
                     <li class="list-group-item tag-2">
@@ -435,14 +430,19 @@ Happy&nbsp;Blogging!</p>
                             Science
                         </a>
                     </li>
+                    <li class="list-group-item tag-2">
+                        <a href="http://blog.justalfred.com/tag/humans.html">
+                            humans
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-3">
+                        <a href="http://blog.justalfred.com/tag/code.html">
+                            Code
+                        </a>
+                    </li>
                     <li class="list-group-item tag-3">
                         <a href="http://blog.justalfred.com/tag/info.html">
                             info
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://blog.justalfred.com/tag/code.html">
-                            Code
                         </a>
                     </li>
                 </ul>

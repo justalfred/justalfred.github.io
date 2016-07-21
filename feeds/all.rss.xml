@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><atom:link href="http://blog.justalfred.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 16 Apr 2016 00:00:00 -0400</lastBuildDate><item><title>You are an Antichrist</title><link>http://blog.justalfred.com/you-are-an-antichrist.html</link><description>&lt;p&gt;Correlation is not Causation. Any student of statistics has heard this repeated
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><atom:link href="http://blog.justalfred.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 20 Jul 2016 00:00:00 -0400</lastBuildDate><item><title>PyGotham 2016</title><link>http://blog.justalfred.com/pygotham-2016.html</link><description>&lt;p&gt;I wish I could make all this prettier, but I gave a talk at
+&lt;a href="https://2016.pygotham.org/"&gt;PyGotham&lt;/a&gt;.
+It&amp;#8217;s not my best work since I&amp;#8217;m not actually terribly experienced with the
+subject matter. But it does represent packaged knowledge that I wish I had
+when I was getting started with&amp;nbsp;Spark.&lt;/p&gt;
+&lt;p&gt;A few people asked for slides, so this is my attempt to post them. I&amp;#8217;m not
+bothering with making reveal.js work, so it&amp;#8217;s all one long html doc. Sorry
+it&amp;#8217;s not prettier. I know what pretty looks like; I don&amp;#8217;t know how to make
+pretty&amp;nbsp;things.&lt;/p&gt;
+&lt;p&gt;Well, for what it&amp;#8217;s worth, I present to you
+&lt;a href="http://blog.justalfred.com/html/PyGotham2016.html"&gt;the slides&lt;/a&gt;
+to &amp;#8220;Spark Dataframes for the Pandas&amp;nbsp;Pro&amp;#8221;. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Wed, 20 Jul 2016 00:00:00 -0400</pubDate><guid>tag:blog.justalfred.com,2016-07-20:pygotham-2016.html</guid><category>Code</category></item><item><title>You are an Antichrist</title><link>http://blog.justalfred.com/you-are-an-antichrist.html</link><description>&lt;p&gt;Correlation is not Causation. Any student of statistics has heard this repeated
 time and again. But the world is complex and dynamic, and our mental capacity
 has to fit in the 20-Watt, 3 pound organic mass inside our skulls. We&amp;#8217;re wired
 to see patterns and when we notice B happen right after A enough times, we&amp;#8217;re

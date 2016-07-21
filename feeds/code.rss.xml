@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><atom:link href="http://blog.justalfred.com/feeds/code.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 04 Oct 2013 00:30:00 -0400</lastBuildDate><item><title>Does Not Compute</title><link>http://blog.justalfred.com/does-not-compute.html</link><description>&lt;p&gt;&lt;em&gt;Originally published at: &lt;a href="http://kwontum.blogspot.com/2013/10/does-not-compute.html"&gt;http://kwontum.blogspot.com/2013/10/does-not-compute.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><atom:link href="http://blog.justalfred.com/feeds/code.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 20 Jul 2016 00:00:00 -0400</lastBuildDate><item><title>PyGotham 2016</title><link>http://blog.justalfred.com/pygotham-2016.html</link><description>&lt;p&gt;I wish I could make all this prettier, but I gave a talk at
+&lt;a href="https://2016.pygotham.org/"&gt;PyGotham&lt;/a&gt;.
+It&amp;#8217;s not my best work since I&amp;#8217;m not actually terribly experienced with the
+subject matter. But it does represent packaged knowledge that I wish I had
+when I was getting started with&amp;nbsp;Spark.&lt;/p&gt;
+&lt;p&gt;A few people asked for slides, so this is my attempt to post them. I&amp;#8217;m not
+bothering with making reveal.js work, so it&amp;#8217;s all one long html doc. Sorry
+it&amp;#8217;s not prettier. I know what pretty looks like; I don&amp;#8217;t know how to make
+pretty&amp;nbsp;things.&lt;/p&gt;
+&lt;p&gt;Well, for what it&amp;#8217;s worth, I present to you
+&lt;a href="http://blog.justalfred.com/html/PyGotham2016.html"&gt;the slides&lt;/a&gt;
+to &amp;#8220;Spark Dataframes for the Pandas&amp;nbsp;Pro&amp;#8221;. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Wed, 20 Jul 2016 00:00:00 -0400</pubDate><guid>tag:blog.justalfred.com,2016-07-20:pygotham-2016.html</guid><category>Code</category></item><item><title>Does Not Compute</title><link>http://blog.justalfred.com/does-not-compute.html</link><description>&lt;p&gt;&lt;em&gt;Originally published at: &lt;a href="http://kwontum.blogspot.com/2013/10/does-not-compute.html"&gt;http://kwontum.blogspot.com/2013/10/does-not-compute.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Let&amp;#8217;s talk about language. How amazing is it that using sounds or
 symbols, we can implant in another person&amp;#8217;s mind an entirely new state?
 We can describe a place that person has never seen, we can construct a

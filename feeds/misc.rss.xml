@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><atom:link href="http://blog.justalfred.com/feeds/misc.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Jun 2015 00:00:00 -0400</lastBuildDate><item><title>Re-Introduction</title><link>http://blog.justalfred.com/re-introduction.html</link><description>&lt;p&gt;As with so many projects, blogs in particular, mine suffered inattention after the initial excitement of setting it up wore off and the demands of life took over.
+<rss version="2.0"><channel><title>Just Alfred</title><link>http://blog.justalfred.com/</link><description></description><lastBuildDate>Mon, 29 Jun 2015 00:00:00 -0400</lastBuildDate><item><title>Re-Introduction</title><link>http://blog.justalfred.com/re-introduction.html</link><description>&lt;p&gt;As with so many projects, blogs in particular, mine suffered inattention after the initial excitement of setting it up wore off and the demands of life took over.
 So here&amp;#8217;s take two on the revival of this outlet.
 I have a couple guides in the works detailing starting a blog in Pelican and installing Arch linux, but I intend to share smaller posts more often.
 Topics will range from data science to computer science to physical science, music to math to madness.
 Keep an eye out for posts coming soon.
-I hope you&amp;nbsp;enjoy.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Mon, 29 Jun 2015 00:00:00 -0400</pubDate><guid>tag:blog.justalfred.com,2015-06-29:re-introduction.html</guid><category>info</category></item><item><title>Introduction</title><link>http://blog.justalfred.com/introduction.html</link><description>&lt;p&gt;Back when I was in grad school, I started a blog to satisfy an itch to write.
+I hope you&amp;nbsp;enjoy.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Mon, 29 Jun 2015 00:00:00 -0400</pubDate><guid isPermaLink="false">tag:blog.justalfred.com,2015-06-29:re-introduction.html</guid><category>info</category></item><item><title>Introduction</title><link>http://blog.justalfred.com/introduction.html</link><description>&lt;p&gt;Back when I was in grad school, I started a blog to satisfy an itch to write.
 I used Blogger at the time because it was free and easy to set up.
 Now it seems the reputation of that platform has gone the way of &lt;span class="caps"&gt;AOL&lt;/span&gt;.
 Also, now that I work in the software industry, I have new blogging needs.
@@ -16,7 +16,7 @@ I&amp;#8217;ll also post my process for starting this.
 I haven&amp;#8217;t decided whether or not to allow&amp;nbsp;comments.&lt;/p&gt;
 &lt;p&gt;But the intent of this blog is to help me clarify my thinking around topics that are important to me.
 Either personally or professionally.
-I&amp;#8217;m looking forward to learning a lot in this&amp;nbsp;process.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Fri, 02 Jan 2015 00:00:00 -0500</pubDate><guid>tag:blog.justalfred.com,2015-01-02:introduction.html</guid><category>info</category></item><item><title>Renaissance</title><link>http://blog.justalfred.com/renaissance.html</link><description>&lt;p&gt;&lt;em&gt;Originally published at: &lt;a href="http://kwontum.blogspot.com/2013/02/None.html"&gt;http://kwontum.blogspot.com/2013/02/None.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+I&amp;#8217;m looking forward to learning a lot in this&amp;nbsp;process.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Fri, 02 Jan 2015 00:00:00 -0500</pubDate><guid isPermaLink="false">tag:blog.justalfred.com,2015-01-02:introduction.html</guid><category>info</category></item><item><title>Renaissance</title><link>http://blog.justalfred.com/renaissance.html</link><description>&lt;p&gt;&lt;em&gt;Originally published at: &lt;a href="http://kwontum.blogspot.com/2013/02/None.html"&gt;http://kwontum.blogspot.com/2013/02/None.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I don&amp;#8217;t think I have to remind my readers what &lt;em&gt;renaissance&lt;/em&gt; means, but
 that is what is going on&amp;nbsp;here.  &lt;/p&gt;
 &lt;p&gt;&lt;a name="more"&gt;&lt;/a&gt;It has been well over a year since my last post, and
@@ -62,4 +62,4 @@ to 15 intervals (15-grams) are searchable here! Music is a
 multidimensional stream and therefore difficult to represent in
 machine-readable bits. This is a wonderful first step at extracting one
 dimension in order to enable some discovery. I will be taking a crack at
-it when I find the&amp;nbsp;time.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Mon, 11 Feb 2013 01:57:00 -0500</pubDate><guid>tag:blog.justalfred.com,2013-02-11:renaissance.html</guid><category>The Classical-Kwontum Interface</category><category>Music</category><category>info</category></item></channel></rss>
+it when I find the&amp;nbsp;time.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Just Alfred</dc:creator><pubDate>Mon, 11 Feb 2013 01:57:00 -0500</pubDate><guid isPermaLink="false">tag:blog.justalfred.com,2013-02-11:renaissance.html</guid><category>The Classical-Kwontum Interface</category><category>Music</category><category>info</category></item></channel></rss>

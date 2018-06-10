@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="https://blog.justalfred.com/drafts/getting-started-with-pelican-on-github-pages.html">
+<link rel="canonical" href="https://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html">
 
         <meta name="author" content="Just Alfred" />
         <meta name="keywords" content="Code" />
@@ -18,9 +18,9 @@
         <meta property="og:site_name" content="Just Alfred" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Getting Started with Pelican on Github Pages"/>
-        <meta property="og:url" content="https://blog.justalfred.com/drafts/getting-started-with-pelican-on-github-pages.html"/>
+        <meta property="og:url" content="https://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html"/>
         <meta property="og:description" content="How I got this site started"/>
-        <meta property="article:published_time" content="2015-06-30" />
+        <meta property="article:published_time" content="2018-06-09" />
             <meta property="article:section" content="code" />
             <meta property="article:tag" content="Code" />
             <meta property="article:author" content="Just Alfred" />
@@ -102,7 +102,7 @@ Just Alfred            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://blog.justalfred.com/drafts/getting-started-with-pelican-on-github-pages.html"
+                    <a href="https://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html"
                        rel="bookmark"
                        title="Permalink to Getting Started with Pelican on Github Pages">
                         Getting Started with Pelican on Github&nbsp;Pages
@@ -115,7 +115,7 @@ Just Alfred            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2015-06-30T00:00:00-04:00"> (Tue) 2015-06-30</time>
+        <i class="fa fa-calendar"></i><time datetime="2018-06-09T00:00:00-04:00"> (Sat) 2018-06-09</time>
     </span>
 
 
@@ -134,6 +134,18 @@ It&#8217;s not that I think we need more noise on the internet.
 It&#8217;s that the conversations out there are often dominated by a few loud voices that are often not representative of the masses.
 It&#8217;s that sometimes the most helpful thing for you to hear is that someone out there has gone through what you&#8217;re going through and can tell you something about the experience.
 I want more people to&nbsp;blog.</p>
+<h1>Intent</h1>
+<p>There are many great, full-featured blogging platforms out there.
+For me, I wanted stronger ownership over my content.
+I wanted a blogging platform that allows me to draft in Markdown
+so I could easily share code or data-related work (though in retrospect, I&#8217;ve hardly done any of that).
+I didn&#8217;t want to pay much money, and I wanted to avoid maintaining a server.
+After a few months of indecision, I settled on using Pelican to generate a static website which I would host on Github Pages.
+Pelican has the advantage of being well supported and in a language that I like (Python).
+It&#8217;s similar to Jekyll for those who are familiar.
+Github Pages is free and allows me to use a custom domain with <a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">enforced https</a>.
+In the end, I have a blog that I feel secure about and that costs me nothing more than the domain registration.
+About $10-20 a&nbsp;year.</p>
 <p>There are various guides out there that show how easy it is to get started publishing with Pelican.
 My problem is that I don&#8217;t like uncertainty, and these guides typically explain &#8216;what&#8217;, but not &#8216;why&#8217;.
 What are all these auto-generated files for?
@@ -142,24 +154,25 @@ How can I be sure I don&#8217;t expose more information than I want?
 Because of my insecurity, it took me a lot longer to get started than I wanted.
 Here is my summary of the steps I ended up taking, and an explanation of what each step does.
 Hopefully this will save the reader time bouncing around various tutorials, blog posts, and&nbsp;documentation.</p>
-<h1>Intent</h1>
-<p>I wanted a blogging platform which allows me to draft in Markdown.
-I didn&#8217;t want to pay much money, and I wanted to avoid having to serve a website.
-After a few months of indecision, I settled on using Pelican to generate a static website which I would host on Github Pages.
-Pelican has the advantage of being well supported and in a language that I like (Python).
-Github Pages is free and allows me to use a custom domain.
-I set everything up at the start of January, and haven&#8217;t touched it since.
-So this is my best recollection of how I got&nbsp;started.</p>
 <h1>Pelican</h1>
 <p>If you&#8217;re not familiar with the terminology so far, Pelican is a Python library that lets you generate static websites from templates.
 By static, we mean that the content served is the same for everyone because it&#8217;s generated in advance.
 Blogs are typically static while ecommerce sites (where you login, have an account, order history, etc.) are typically not.
 Templates save the blogger from having to muck about with verbose <span class="caps">HTML</span>.
 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> are two templating formats that Pelican handles well.
-As an example, Markdown lets you write: <code>[a link](http://blog.justalfred.com)</code> instead of: <code>&lt;a href="https://blog.justalfred.com"&gt;a link&lt;/a&gt;</code>.
-Pelican itself is highly customizable and extensible.
+As an example, Markdown lets you specify a link&nbsp;with:</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="n">a</span> <span class="n">link</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.justalfred.com)</span>
+</pre></div>
+
+
+<p>instead&nbsp;of:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://blog.justalfred.com&quot;</span><span class="p">&gt;</span>a link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>Pelican itself is highly customizable and extensible.
 You&#8217;ll want to be somewhat familiar with Python and git to have an easy time following along.
-I&#8217;ve been working in Arch Linux, but these instructions will probably work in <span class="caps">OSX</span> as well.
+I&#8217;ve been working in Linux, but these instructions will probably work in <span class="caps">OSX</span> as well.
 Windows users will have to interpret the commands and paths&nbsp;accordingly.</p>
 <h1>Install</h1>
 <p>So let&#8217;s get started.
@@ -170,19 +183,19 @@ If you&#8217;re sloppy and lazy like me, just go ahead and install a few&nbsp;pa
 
 
 <p>Markdown is, of course, only necessary if you want to use Markdown.
-<a href="http://static.mintchaos.com/projects/typogrify/">Typogrify</a> makes things a little prettier.
-Also&nbsp;optional.</p>
+<a href="https://github.com/mintchaos/typogrify">Typogrify</a>
+makes things a little prettier by converting straight quotes into curly quotes and such.
+It&#8217;s also optional, but consider that the last commit is from 2014.
+I have had no problems with&nbsp;it.</p>
 <h1>Generate the initial&nbsp;boilerplate</h1>
 <p>The first thing to do now is to use the quickstart script to generate a skeleton for your blog.
 This step doesn&#8217;t make your blog, but it makes the files you&#8217;ll use later to make your blog.
-If you mess up, you can delete the generated folder and just start right over.
+If you mess up, you can delete the generated files and just start right over.
 For most of the prompts, you can just accept the default.
 For most of the rest, you can always change those settings later if you change your mind.
 In particular, though, I strongly recommend generating the&nbsp;Makefile.</p>
 <div class="highlight"><pre><span></span>$ pelican-quickstart
-
-
-Welcome to pelican-quickstart v3.5.0.
+Welcome to pelican-quickstart v3.7.1.
 
 This script will <span class="nb">help</span> you create a new Pelican-based website.
 
@@ -190,14 +203,15 @@ Please answer the following questions so this script can generate the files
 needed by Pelican.
 
 
-&gt; Where <span class="k">do</span> you want to create your new web site? <span class="o">[</span>.<span class="o">]</span> 
-&gt; What will be the title of this web site? Just Alfred
-&gt; Who will be the author of this web site? Just Alfred
+&gt; Where <span class="k">do</span> you want to create your new web site? <span class="o">[</span>.<span class="o">]</span> <span class="nv">$PICK_A_DIR</span>
+&gt; What will be the title of this web site? <span class="nv">$PICK_A_TITLE</span>
+&gt; Who will be the author of this web site? <span class="nv">$PICK_A_NAME</span>
 &gt; What will be the default language of this web site? <span class="o">[</span>en<span class="o">]</span> 
 &gt; Do you want to specify a URL prefix? e.g., http://example.com   <span class="o">(</span>Y/n<span class="o">)</span> 
-&gt; What is your URL prefix? <span class="o">(</span>see above example<span class="p">;</span> no trailing slash<span class="o">)</span> http://blog.justalfred.com 
+&gt; What is your URL prefix? <span class="o">(</span>see above example<span class="p">;</span> no trailing slash<span class="o">)</span> https://blog.justalfred.com
 &gt; Do you want to <span class="nb">enable</span> article pagination? <span class="o">(</span>Y/n<span class="o">)</span> 
 &gt; How many articles per page <span class="k">do</span> you want? <span class="o">[</span><span class="m">10</span><span class="o">]</span> 
+&gt; What is your <span class="nb">time</span> zone? <span class="o">[</span>Europe/Paris<span class="o">]</span> 
 &gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? <span class="o">(</span>Y/n<span class="o">)</span> 
 &gt; Do you want an auto-reload <span class="p">&amp;</span> simpleHTTP script to assist with theme and site development? <span class="o">(</span>Y/n<span class="o">)</span> 
 &gt; Do you want to upload your website using FTP? <span class="o">(</span>y/N<span class="o">)</span> 
@@ -207,19 +221,21 @@ needed by Pelican.
 &gt; Do you want to upload your website using Rackspace Cloud Files? <span class="o">(</span>y/N<span class="o">)</span> 
 &gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
 &gt; Is this your personal page <span class="o">(</span>username.github.io<span class="o">)</span>? <span class="o">(</span>y/N<span class="o">)</span> y
-Done. Your new project is available at <span class="nv">$SOME_DIR</span>
+Done. Your new project is available at <span class="nv">$PICK_A_DIR</span>
 </pre></div>
 
 
-<p>At this point, you can navigate to the folder where Pelican guides you (<code>$SOME_DIR</code>) and find the following new files and&nbsp;folders:</p>
+<p>At this point, Pelican has put new files and folders into the folder you specified (<code>$PICK_A_DIR</code>),
+creating the folder if it didn&#8217;t already exist.
+You can navigate to this folder and find the&nbsp;following:</p>
 <ul>
 <li>develop_server.sh - This is a very useful shell script for seeing the effects of your updates and is called by the&nbsp;Makefile.</li>
-<li>Makefile - This file defines <code>make</code> commands that perform the most important&nbsp;tasks</li>
-<li>pelicanconf.py - This file contains settings to customize your&nbsp;site</li>
-<li>publishconf.py - This file contains settings that only used when you&#8217;re ready to publish to the&nbsp;web</li>
-<li>content/ - This folder is where you&#8217;ll put the templates and files that will be translated into the content of your&nbsp;site</li>
-<li>output/ - This folder might not exist until you convert your content into&nbsp;html</li>
-<li>fabfile.py - This has something to do with <a href="http://www.fabfile.org/">fabric</a> which I don&#8217;t&nbsp;use</li>
+<li>Makefile - This file defines <code>make</code> commands that perform the most important tasks like generating your site and starting a local http&nbsp;server.</li>
+<li>pelicanconf.py - This file contains settings to customize your&nbsp;site.</li>
+<li>publishconf.py - This file contains settings that are only used when you&#8217;re ready to publish to the&nbsp;web.</li>
+<li>content/ - This folder is where you&#8217;ll put the templates and files that will be translated into the content of your&nbsp;site.</li>
+<li>output/ - This folder might not exist until you convert your content into html. By default, the translated website lands&nbsp;here.</li>
+<li>fabfile.py - This has something to do with <a href="http://www.fabfile.org/">fabric</a> which I don&#8217;t&nbsp;use.</li>
 </ul>
 <p>Some of these are discussed in further detail&nbsp;later.</p>
 <h1>Initial&nbsp;content</h1>
@@ -228,7 +244,19 @@ There are two major types of content to distinguish: articles and pages.
 Articles are the main content of your site, like blog posts.
 Pages are relatively static, like &#8216;about&#8217; or &#8216;contact&#8217; pages.
 Let&#8217;s start with one of&nbsp;each.</p>
-<p>Create a folder, <code>content/pages/</code>, make a new file called, <code>about.md</code>, and give it the following&nbsp;contents:</p>
+<p>Create a file called, <code>content/cat1/test.md</code>, and give it the following&nbsp;contents:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Test</span> <span class="n">Post</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">1997</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">29</span> <span class="mi">02</span><span class="o">:</span><span class="mi">14</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">testtag</span>
+<span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">This</span> <span class="k">is</span> <span class="n">an</span> <span class="n">article</span>
+
+<span class="s2">&quot;Hope&quot;</span> <span class="k">is</span> <span class="n">the</span> <span class="n">thing</span> <span class="k">with</span> <span class="n">feathers</span> <span class="o">-</span>
+<span class="o">...</span>
+</pre></div>
+
+
+<p>Next, create a folder, <code>content/pages/</code>, make a new file called, <code>about.md</code>, and give it the following&nbsp;contents:</p>
 <div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">About</span>
 <span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
 
@@ -236,62 +264,68 @@ Let&#8217;s start with one of&nbsp;each.</p>
 </pre></div>
 
 
-<p>You can (should) replace all of that with the relevant information that you would like to have&nbsp;displayed.</p>
-<p>Next, create a file called, <code>content/test.md</code>, and give it the following&nbsp;contents:</p>
-<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Test</span> <span class="n">Post</span>
-<span class="n">Date</span><span class="o">:</span> <span class="mi">1997</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">29</span> <span class="mi">02</span><span class="o">:</span><span class="mi">14</span>
-<span class="n">Tags</span><span class="o">:</span> <span class="n">testtag</span>
-<span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
-<span class="n">Summary</span><span class="o">:</span> <span class="n">This</span> <span class="k">is</span> <span class="n">an</span> <span class="n">article</span>
-
-<span class="n">Geometric</span> <span class="n">growth</span> <span class="k">is</span> <span class="n">the</span> <span class="n">discrete</span> <span class="n">version</span> <span class="n">of</span> <span class="n">exponential</span> <span class="n">growth</span><span class="o">.</span>
-</pre></div>
-
-
+<p>You should, of course, eventually replace all of that with your own&nbsp;information.</p>
 <p>Notice how the files begin with metadata that are not Markdown syntax.
 Pelican will interpret these fields when it translates the Markdown into <span class="caps">HTML</span>.
 You can read more about this section <a href="http://docs.getpelican.com/en/latest/content.html">here</a>.</p>
 <p>You now have a few different ways of generating the html of your shiny new website.
-The most direct is to run <code>pelican path/to/content/</code>.
-This will generate a folder called, <code>output/</code>, which contains the static html for your blog.
+The most direct is to run <code>pelican content/</code> (supposing you&#8217;re in the project&#8217;s root folder).
+This will populate the folder, <code>output/</code>, (or generate a new one wherever you are)
+with the static html and other assets for your blog.
 Equivalently, you can run <code>make html</code> with the same result.
-There are a few settings at the top of <code>Makefile</code> that you may wish to edit, but the defaults are probably good.
-What you&#8217;re asking Pelican to do here is to examine the files in <code>content/</code> and the settings in <code>pelicanconf.py</code> to translate everything into your new website.
-Eventually, you&#8217;ll send the contents of <code>output</code> to wherever the files will be hosted&#8212;GitHub Pages, in my&nbsp;case.</p>
+What these commands do is examine the files in <code>content/</code> and the settings in <code>pelicanconf.py</code> to translate everything into your new website.
+There are a few settings at the top of <code>Makefile</code> that you may wish to edit, but the defaults are probably fine.
+Eventually, you&#8217;ll send the contents of <code>output</code> to wherever the files will be hosted&#8212;GitHub Pages, in my case.
+But not&nbsp;yet.</p>
 <p>Once you&#8217;ve done this, to view this in a web browser, you&#8217;ll need to start a webserver from within the <code>output</code> folder.
 Fortunately, Python comes with one.
-If you&#8217;re running python 2 (you probably are) you can run <code>python -m SimpleHTTPServer</code>.
-If you&#8217;re running python 3, the command is <code>python3 -m http.server</code>.
-Possibly easier, you can run <code>make serve</code> from the root folder of your project (i.e. one level above <code>content/</code>).
-The Makefile specifies where the output goes, so it will know where to go to&nbsp;serve.</p>
+Navigate to the <code>output/</code> folder.
+If you&#8217;re running python 2 you can run <code>python -m SimpleHTTPServer</code>.
+If you&#8217;re running python 3 (good for you), the command is <code>python3 -m http.server</code>.
+Easier for most, you can run <code>make serve</code> from the root folder of your&nbsp;project.</p>
 <p>Now open a web browser, navigate to <code>http://localhost:8000</code> and see the results of your work so&nbsp;far!</p>
 <p>Of course, the authors of Pelican have provided even more convenience for you.
 Given this workflow so far, every time you update a file, you have to regenerate the html to see the updates in your web browser.
-Stop webserver, save, <code>make html</code>, <code>make serve</code> after every change.
+Meaning, stop the webserver, save, <code>make html</code>, <code>make serve</code> after every change.
 Instead, you can run <code>make devserver</code> once which does three things.
 First, it generates the html of your site.
 Second, it starts a webserver at port 8000 as before.
 Third, it detects when content gets updated and will regenerate the html automatically.
 All you have to do is save content then refresh your browser to see the latest.
 When you&#8217;re done editing and want to stop the webserver process, run <code>make stopserver</code>.</p>
+<p>Finally, a couple more content concepts.
+As you click around, it may be hard to tell the difference between all the pages since they look so similar with so little content.
+But there are various index pages as well as the one article page and one about page so far.
+The top-level index is what you see first.
+Try creating other dummy articles to see how it looks.
+Along the top, you see a link to the About page you made as well as a link to a category index, cat1.
+Articles can belong to a single category, defined by the folder structure within the <code>content/</code> folder.
+Articles can have multiple tags, though, defined in the metadata.
+Use this to your advantage to keep your site&nbsp;organized.</p>
 <h1>Version&nbsp;control</h1>
 <p>It&#8217;s not necessary, but it&#8217;s probably a good idea to keep a version history of your blog contents.
-I&#8217;m going to assume the reader is familiar with git, github, and creating new repositories.
-I advise putting <code>cache/</code>, <code>output/</code>, and <code>*.pyc</code> in <code>.gitignore</code> at minimum, but the other files are probably worth tracking..
+If you&#8217;re familiar with git, github, and creating new repositories,
+then I advise putting <code>cache/</code>, <code>output/</code>, <code>*.pyc</code>, and <code>*.pid</code> in <code>.gitignore</code> at minimum.
 My blog contents are <a href="https://github.com/justalfred/justalfred-blog">here</a>.
-If this part isn&#8217;t clear to you, feel free to email or tweet at me, and I&#8217;ll add more&nbsp;detail.</p>
+You can view my source code if anything in this tutorial needs&nbsp;clarification.</p>
+<p>If you&#8217;re not familiar with version control, don&#8217;t worry&#8212;the site doesn&#8217;t depend on&nbsp;it.</p>
 <h1><a href="http://docs.getpelican.com/en/latest/tips.html#extra-tips">Custom&nbsp;domain</a></h1>
-<p>If you own a domain that you&#8217;d like to use, this is how; otherwise skip this section.
-First, create a file called <code>CNAME</code> in a new folder, <code>/content/extra</code>.
+<p>If you own a domain that you&#8217;d like to use, this is how.
+Otherwise skip this section.
+First, create a file called <code>CNAME</code> in a new folder, <code>content/extra/</code>.
 Edit the file so the only contents are the domain you want to use, e.g.: <code>blog.justalfred.com</code>.
-Next, edit your <code>pelicanconf.py</code> to add the following&nbsp;lines:</p>
+Next, edit your <code>pelicanconf.py</code> to add the following lines.
+Note how they refer to the file you just&nbsp;created.:</p>
 <div class="highlight"><pre><span></span><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
 <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">},}</span>
 </pre></div>
 
 
-<p>Now, all links generated will use your <span class="caps">CNAME</span> as the base domain!
-You can regenerate your site and see where the <span class="caps">CNAME</span> file ends up.
+<p>Now, all the links that pelican generates (e.g. from an article to the home page)
+will use your <span class="caps">CNAME</span> as the domain!
+Or, it will once we&#8217;re ready to publish.
+For now, everything still links to localhost.
+You can regenerate your site and see where the <span class="caps">CNAME</span> file ends up if you&#8217;re curious.
 Of course, there&#8217;s nothing special about the folder, <code>extra/</code>, but this seems to be the&nbsp;convention.</p>
 <h1><a href="http://docs.getpelican.com/en/latest/tips.html#extra-tips">robots.txt</a></h1>
 <p>If you care about web crawlers indexing certain portions of your site, you can create a file, <code>extra/robots.txt</code>.
@@ -314,7 +348,7 @@ Disallow: /theme/
 <div class="highlight"><pre><span></span><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">]</span>
 <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">},</span>
                        <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;robots.txt&#39;</span><span class="p">},</span>
-               <span class="p">}</span>
+                       <span class="p">}</span>
 </pre></div>
 
 
@@ -329,39 +363,52 @@ Add the following to your <code>pelicanconf.py</code>:</p>
 <p>If you want to customize the look of your site, you can get pretty far by using one of the <a href="https://github.com/getpelican/pelican-themes">packaged themes</a>.
 I chose the &#8216;<a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a>&#8216; theme because of its completeness and simplicity.
 It has a minimalist aeshthetic, it&#8217;s responsive, it recognizes a host of extra settings.
-It can be further customized by editing a custom <span class="caps">CSS</span> file as described <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3#custom-css">here</a>, but I haven&#8217;t gotten around to that.
+It can be further customized by editing a custom <span class="caps">CSS</span> file as described <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3#custom-cssjs">here</a>.
+Good luck if you try. Every time I touch <span class="caps">CSS</span>, I lose hours of my life.
 Whichever theme you choose, clone the &#8216;pelican-themes&#8217; repo, and add the following to your <code>pelicanconf.py</code>:</p>
 <div class="highlight"><pre><span></span>THEME = &#39;path/to/pelican-themes/chosen-theme&#39;
 </pre></div>
 
 
+<p>I have the repo cloned outside of the blog, to avoid overlap weirdness with git, so for me, it looks&nbsp;like:</p>
+<div class="highlight"><pre><span></span>THEME = &#39;../pelican-themes/pelican-bootstrap3&#39;
+</pre></div>
+
+
+<p>Note that some of the themes have extra installation instructions, including my chosen one.
+Check the <code>README.md</code> files for&nbsp;more.</p>
 <h1>Time&nbsp;zone</h1>
 <p>You will probably want to set the time zone that your site uses.
-This <a href="http://docs.getpelican.com/en/latest/settings.html#timezone">seems</a> to be mostly important if you set up <span class="caps">RSS</span> or Atom feeds later on (which I recommend; I love <span class="caps">RSS</span>).
-Simply add the following to your <code>pelicanconf.py</code> with the appropriate time&nbsp;zone:</p>
+This <a href="http://docs.getpelican.com/en/latest/settings.html#timezone">seems</a> to be mostly important if you set up <span class="caps">RSS</span> or Atom feeds later on (which I recommend&#8212;I love <span class="caps">RSS</span>).
+Simply add the following to your <code>pelicanconf.py</code> with the appropriate <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">time zone</a>:</p>
 <div class="highlight"><pre><span></span><span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">&#39;America/New_York&#39;</span>
 </pre></div>
 
 
 <h1>publishconf.py</h1>
 <p>As mentioned earlier, <code>publishconf.py</code> is much like <code>pelicanconf.py</code>, but the settings listed there are only applied for final conversion.
-For instance, you probably don&#8217;t want to include Google Analytics tracking in your draft versions of your site; only in the version that you finally&nbsp;publish.</p>
-<p>Speaking of it, the first thing you&#8217;ll want to add is probably Google Analytics tracking.
-Add the tracking id to <code>publishconf.py</code>:</p>
+For instance, you might have noticed that all the internal links on your site point to <code>localhost</code> instead of the actual domain.
+<code>publishconf.py</code> is where you&#8217;ll specify to pelican to use the actual&nbsp;domain.</p>
+<p>You probably also don&#8217;t want to include Google Analytics tracking in the draft versions of your site.
+To add Google Analytics tracking, <a href="https://support.google.com/analytics/answer/1008015?hl=en">set up <span class="caps">GA</span></a> and add the tracking <span class="caps">ID</span> to <code>publishconf.py</code>:</p>
 <div class="highlight"><pre><span></span><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="s2">&quot;UA-XXXXXXXX-X&quot;</span>
 </pre></div>
 
 
-<p>If you want to generate an <span class="caps">RSS</span> feed (some of us still use <span class="caps">RSS</span>) you can do that quite simply&nbsp;here:</p>
+<p>Note that I&#8217;ve chosen to remove <span class="caps">GA</span> tracking to give my readers a tracker-free&nbsp;experience.</p>
+<p>If you want to generate <span class="caps">RSS</span> feeds (some of us still use <span class="caps">RSS</span>) you can do that quite simply in <code>publishconf.py</code>:</p>
 <div class="highlight"><pre><span></span><span class="n">FEED_DOMAIN</span> <span class="o">=</span> <span class="n">SITEURL</span>
 <span class="n">FEED_ALL_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.rss.xml&#39;</span>
 <span class="n">CATEGORY_FEED_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/</span><span class="si">%s</span><span class="s1">.rss.xml&#39;</span>
 </pre></div>
 
 
-<p>If you want to use <a href="https://disqus.com/">Disqus</a> to enable comments (I haven&#8217;t decided to do that yet. Email or tweet at me if I should.), you can add the sitename in this file as&nbsp;well.</p>
+<p>If you want to use <a href="https://disqus.com/">Disqus</a> to enable comments, you can
+<a href="http://docs.getpelican.com/en/latest/settings.html#DISQUS_SITENAME">add the sitename</a> in this file as well.
+Note that I&#8217;ve chosen to eschew Disqus for privacy reasons,&nbsp;too.</p>
 <p>Once you&#8217;re ready to share your site with the world, you can generate a final version of your site.
 <code>pelican content -s publishconf.py</code> and <code>make publish</code> are equivalent commands to do this.
+Guess which one I use.
 It&#8217;s a good idea to delete the output folder first.
 Everything will be regenerated, but if you made changes that left behind some old versions of old files, you want to be sure to clear those.
 Note: when your site gets beyond a certain point, you may want to speed up the conversion process by having Pelican <a href="http://docs.getpelican.com/en/latest/settings.html#reading-only-modified-content">only read modified content</a>.
@@ -369,8 +416,11 @@ I haven&#8217;t tried this&nbsp;yet.</p>
 <p>Once you&#8217;ve run one of those two publish commands, you can upload your content to wherever they will be hosted.
 If you&#8217;re using GitHub Pages like me, you&#8217;ll want to create a repository named, <code>USERNAME.github.io</code>, with your username.
 Any repo following this naming scheme will be <a href="https://pages.github.com/">recognized and served automatically</a>.
-You can then simply push your content to the master branch of that repo, and wait a few minutes to see it appear at <code>http://USERNAME.github.io</code>!</p>
-<p>Note, if you set up a <span class="caps">CNAME</span> earlier, you&#8217;ll also want to go to your domain name registrar and edit the <span class="caps">DNS</span> settings to point to the right&nbsp;place.</p>
+You can then simply push your content to the master branch of that repo, and wait a few minutes to see it appear at <code>https://USERNAME.github.io</code>!
+(Please take care to <a href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">enforce https</a>).</p>
+<p>Note, if you set up a <span class="caps">CNAME</span> earlier, you&#8217;ll also need to do a few extra steps <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/">with Github</a>
+and with your domain registrar.
+Check their documentation for specific&nbsp;instructions.</p>
 <h1>Import old&nbsp;blog</h1>
 <p>Since I was migrating posts out of Blogger, I did this in a three-step process.
 First, I used Blogger&#8217;s <a href="https://support.google.com/blogger/answer/97416?hl=en">export <span class="caps">XML</span> functionality</a> to retrieve my content.
@@ -380,18 +430,15 @@ Second, I ran the following command to convert the <span class="caps">XML</span>
 
 
 <p>Third, I wrote a python script to do a bit of cleanup.
-Haha That&#8217;s the hand-wavy magic answer.
-But you can see my script <a href="https://github.com/justalfred/justalfred-blog/blob/master/convert.py">here</a> and edit it to suit your&nbsp;needs.</p>
-<blockquote class="twitter-tweet tw-align-center" lang="en"><p lang="en" dir="ltr">Every coding tutorial ever written. - <a href="https://twitter.com/ossia">@ossia</a> <a href="http://t.co/kV3XFbBAf7">pic.twitter.com/kV3XFbBAf7</a></p>&mdash; Rich Rogers (@RichRogersHDS) <a href="https://twitter.com/RichRogersHDS/status/592006956954423298">April 25, 2015</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Sorry.</p>
+That&#8217;s admittedly a hand-wavy magic answer, but it was a very specific need.
+If you&#8217;re doing the same, you can see my script <a href="https://github.com/justalfred/justalfred-blog/blob/master/convert.py">here</a> and edit it to suit your&nbsp;needs.</p>
 <h1>Next&nbsp;steps</h1>
 <p>As I mentioned, Pelican is easily extended and customized.
 Check out <a href="https://github.com/getpelican/pelican-plugins">pelican plugins</a> for a large collection of extensions.
-So far, I&#8217;m only using <code>tag_cloud</code>.
-I also recommend going through all the available <a href="http://docs.getpelican.com/en/latest/settings.html">settings</a> to see if you might like some non-default behavior.
+At the time of publishing this, I&#8217;m only using <code>tag_cloud</code> and <code>i18n_subsites</code> for my theme.
+I also recommend going through all the available <a href="http://docs.getpelican.com/en/latest/settings.html">settings</a>
+to see if you might like some non-default behavior and the
+<a href="http://docs.getpelican.com/en/stable/faq.html"><span class="caps">FAQ</span></a> and <a href="http://docs.getpelican.com/en/stable/tips.html">tips</a> for other tips.
 The particular theme that you choose may have other settings as well.
 Finally, you can edit style to your heart&#8217;s content.
 Or not at&nbsp;all.</p>
@@ -427,16 +474,16 @@ Happy&nbsp;Blogging!</p>
       <a href="https://blog.justalfred.com/tag/the-classical-kwontum-interface.html">The Classical-Kwontum Interface</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="https://blog.justalfred.com/tag/humans.html">humans</a>
+      <a href="https://blog.justalfred.com/tag/music.html">Music</a>
     </li>
     <li class="list-group-item tag-1">
-      <a href="https://blog.justalfred.com/tag/music.html">Music</a>
+      <a href="https://blog.justalfred.com/tag/humans.html">humans</a>
     </li>
     <li class="list-group-item tag-2">
       <a href="https://blog.justalfred.com/tag/science.html">science</a>
     </li>
     <li class="list-group-item tag-2">
-      <a href="https://blog.justalfred.com/tag/code.html">code</a>
+      <a href="https://blog.justalfred.com/tag/code.html">Code</a>
     </li>
     <li class="list-group-item tag-3">
       <a href="https://blog.justalfred.com/tag/info.html">info</a>

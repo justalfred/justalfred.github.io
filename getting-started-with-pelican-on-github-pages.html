@@ -330,9 +330,9 @@ Of course, there&#8217;s nothing special about the folder, <code>extra/</code>, 
 This <a href="http://www.robotstxt.org/robotstxt.html">establishes a policy</a> that web crawlers are recommended to follow.
 The major ones will respect your settings.
 Mine has the following&nbsp;contents:</p>
-<div class="highlight"><pre><span></span><span class="k">User</span><span class="o">-</span><span class="n">agent</span><span class="p">:</span> <span class="o">*</span>
-<span class="n">Disallow</span><span class="p">:</span> <span class="o">/</span><span class="n">drafts</span><span class="o">/</span>
-<span class="n">Disallow</span><span class="p">:</span> <span class="o">/</span><span class="n">theme</span><span class="o">/</span>
+<div class="highlight"><pre><span></span><span class="c">User-agent: *</span>
+<span class="c">Disallow: /drafts/</span>
+<span class="c">Disallow: /theme/</span>
 </pre></div>
 
 
@@ -353,7 +353,7 @@ Mine has the following&nbsp;contents:</p>
 <h1>Typogrify</h1>
 <p>If you chose to install <code>typogrify</code> earlier, you&#8217;ll want to enable it.
 Add the following to your <code>pelicanconf.py</code>:</p>
-<div class="highlight"><pre><span></span><span class="n">TYPOGRIFY</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="highlight"><pre><span></span><span class="n">TYPOGRIFY</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 
 
@@ -364,12 +364,12 @@ It has a minimalist aeshthetic, it&#8217;s responsive, it recognizes a host of e
 It can be further customized by editing a custom <span class="caps">CSS</span> file as described <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3#custom-cssjs">here</a>.
 Good luck if you try. Every time I touch <span class="caps">CSS</span>, I lose hours of my life.
 Whichever theme you choose, clone the &#8216;pelican-themes&#8217; repo, and add the following to your <code>pelicanconf.py</code>:</p>
-<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;path/to/pelican-themes/chosen-theme&#39;</span>
+<div class="highlight"><pre><span></span><span class="err">THEME = &#39;path/to/pelican-themes/chosen-theme&#39;</span>
 </pre></div>
 
 
 <p>I have the repo cloned outside of the blog, to avoid overlap weirdness with git, so for me, it looks&nbsp;like:</p>
-<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;../pelican-themes/pelican-bootstrap3&#39;</span>
+<div class="highlight"><pre><span></span><span class="err">THEME = &#39;../pelican-themes/pelican-bootstrap3&#39;</span>
 </pre></div>
 
 
@@ -397,7 +397,7 @@ To add Google Analytics tracking, <a href="https://support.google.com/analytics/
 <p>If you want to generate <span class="caps">RSS</span> feeds (some of us still use <span class="caps">RSS</span>) you can do that quite simply in <code>publishconf.py</code>:</p>
 <div class="highlight"><pre><span></span><span class="n">FEED_DOMAIN</span> <span class="o">=</span> <span class="n">SITEURL</span>
 <span class="n">FEED_ALL_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.rss.xml&#39;</span>
-<span class="n">CATEGORY_FEED_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/</span><span class="si">%s</span><span class="s1">.rss.xml&#39;</span>
+<span class="n">CATEGORY_FEED_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/</span><span class="si">{slug}</span><span class="s1">.rss.xml&#39;</span>
 </pre></div>
 
 

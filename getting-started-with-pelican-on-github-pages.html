@@ -31,6 +31,7 @@
         <link href="https://blog.justalfred.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
               title="Just Alfred RSS Feed"/>
 
+
 </head>
 <body>
 
@@ -134,7 +135,7 @@ Blogs are typically static while ecommerce sites (where you login, have an accou
 Templates save the blogger from having to muck about with verbose <span class="caps">HTML</span>.
 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and <a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> are two templating formats that Pelican handles well.
 As an example, Markdown lets you specify a link&nbsp;with:</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">a</span> <span class="n">link</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.justalfred.com)</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">a</span><span class="w"> </span><span class="n">link</span><span class="p">](</span><span class="n">https</span><span class="o">:</span><span class="c1">//blog.justalfred.com)</span>
 </code></pre></div>
 
 <p>instead&nbsp;of:</p>
@@ -149,7 +150,7 @@ Windows users will have to interpret the commands and paths&nbsp;accordingly.</p
 <p>So let&#8217;s get started.
 You can create a new python virtual environment if you want.
 If you&#8217;re sloppy and lazy like me, just go ahead and install a few&nbsp;packages.</p>
-<div class="highlight"><pre><span></span><code>$ pip install pelican Markdown typogrify
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pelican<span class="w"> </span>Markdown<span class="w"> </span>typogrify
 </code></pre></div>
 
 <p>Markdown is, of course, only necessary if you want to use Markdown.
@@ -164,34 +165,34 @@ If you mess up, you can delete the generated files and just start right over.
 For most of the prompts, you can just accept the default.
 For most of the rest, you can always change those settings later if you change your mind.
 In particular, though, I strongly recommend generating the&nbsp;Makefile.</p>
-<div class="highlight"><pre><span></span><code>$ pelican-quickstart
-Welcome to pelican-quickstart v3.7.1.
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pelican-quickstart
+Welcome<span class="w"> </span>to<span class="w"> </span>pelican-quickstart<span class="w"> </span>v3.7.1.
 
-This script will <span class="nb">help</span> you create a new Pelican-based website.
+This<span class="w"> </span>script<span class="w"> </span>will<span class="w"> </span><span class="nb">help</span><span class="w"> </span>you<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>Pelican-based<span class="w"> </span>website.
 
-Please answer the following questions so this script can generate the files
-needed by Pelican.
+Please<span class="w"> </span>answer<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>questions<span class="w"> </span>so<span class="w"> </span>this<span class="w"> </span>script<span class="w"> </span>can<span class="w"> </span>generate<span class="w"> </span>the<span class="w"> </span>files
+needed<span class="w"> </span>by<span class="w"> </span>Pelican.
 
 
-&gt; Where <span class="k">do</span> you want to create your new web site? <span class="o">[</span>.<span class="o">]</span> <span class="nv">$PICK_A_DIR</span>
-&gt; What will be the title of this web site? <span class="nv">$PICK_A_TITLE</span>
-&gt; Who will be the author of this web site? <span class="nv">$PICK_A_NAME</span>
-&gt; What will be the default language of this web site? <span class="o">[</span>en<span class="o">]</span> 
-&gt; Do you want to specify a URL prefix? e.g., http://example.com   <span class="o">(</span>Y/n<span class="o">)</span> 
-&gt; What is your URL prefix? <span class="o">(</span>see above example<span class="p">;</span> no trailing slash<span class="o">)</span> https://blog.justalfred.com
-&gt; Do you want to <span class="nb">enable</span> article pagination? <span class="o">(</span>Y/n<span class="o">)</span> 
-&gt; How many articles per page <span class="k">do</span> you want? <span class="o">[</span><span class="m">10</span><span class="o">]</span> 
-&gt; What is your <span class="nb">time</span> zone? <span class="o">[</span>Europe/Paris<span class="o">]</span> 
-&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? <span class="o">(</span>Y/n<span class="o">)</span> 
-&gt; Do you want an auto-reload <span class="p">&amp;</span> simpleHTTP script to assist with theme and site development? <span class="o">(</span>Y/n<span class="o">)</span> 
-&gt; Do you want to upload your website using FTP? <span class="o">(</span>y/N<span class="o">)</span> 
-&gt; Do you want to upload your website using SSH? <span class="o">(</span>y/N<span class="o">)</span> 
-&gt; Do you want to upload your website using Dropbox? <span class="o">(</span>y/N<span class="o">)</span> 
-&gt; Do you want to upload your website using S3? <span class="o">(</span>y/N<span class="o">)</span> 
-&gt; Do you want to upload your website using Rackspace Cloud Files? <span class="o">(</span>y/N<span class="o">)</span> 
-&gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> y
-&gt; Is this your personal page <span class="o">(</span>username.github.io<span class="o">)</span>? <span class="o">(</span>y/N<span class="o">)</span> y
-Done. Your new project is available at <span class="nv">$PICK_A_DIR</span>
+&gt;<span class="w"> </span>Where<span class="w"> </span><span class="k">do</span><span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>your<span class="w"> </span>new<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="o">[</span>.<span class="o">]</span><span class="w"> </span><span class="nv">$PICK_A_DIR</span>
+&gt;<span class="w"> </span>What<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>the<span class="w"> </span>title<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="nv">$PICK_A_TITLE</span>
+&gt;<span class="w"> </span>Who<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>the<span class="w"> </span>author<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="nv">$PICK_A_NAME</span>
+&gt;<span class="w"> </span>What<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>the<span class="w"> </span>default<span class="w"> </span>language<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="o">[</span>en<span class="o">]</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>specify<span class="w"> </span>a<span class="w"> </span>URL<span class="w"> </span>prefix?<span class="w"> </span>e.g.,<span class="w"> </span>http://example.com<span class="w">   </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>What<span class="w"> </span>is<span class="w"> </span>your<span class="w"> </span>URL<span class="w"> </span>prefix?<span class="w"> </span><span class="o">(</span>see<span class="w"> </span>above<span class="w"> </span>example<span class="p">;</span><span class="w"> </span>no<span class="w"> </span>trailing<span class="w"> </span>slash<span class="o">)</span><span class="w"> </span>https://blog.justalfred.com
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>article<span class="w"> </span>pagination?<span class="w"> </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>How<span class="w"> </span>many<span class="w"> </span>articles<span class="w"> </span>per<span class="w"> </span>page<span class="w"> </span><span class="k">do</span><span class="w"> </span>you<span class="w"> </span>want?<span class="w"> </span><span class="o">[</span><span class="m">10</span><span class="o">]</span><span class="w"> </span>
+&gt;<span class="w"> </span>What<span class="w"> </span>is<span class="w"> </span>your<span class="w"> </span><span class="nb">time</span><span class="w"> </span>zone?<span class="w"> </span><span class="o">[</span>Europe/Paris<span class="o">]</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>a<span class="w"> </span>Fabfile/Makefile<span class="w"> </span>to<span class="w"> </span>automate<span class="w"> </span>generation<span class="w"> </span>and<span class="w"> </span>publishing?<span class="w"> </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>an<span class="w"> </span>auto-reload<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>simpleHTTP<span class="w"> </span>script<span class="w"> </span>to<span class="w"> </span>assist<span class="w"> </span>with<span class="w"> </span>theme<span class="w"> </span>and<span class="w"> </span>site<span class="w"> </span>development?<span class="w"> </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>FTP?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>SSH?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>Dropbox?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>S3?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>Rackspace<span class="w"> </span>Cloud<span class="w"> </span>Files?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>
+&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>GitHub<span class="w"> </span>Pages?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>y
+&gt;<span class="w"> </span>Is<span class="w"> </span>this<span class="w"> </span>your<span class="w"> </span>personal<span class="w"> </span>page<span class="w"> </span><span class="o">(</span>username.github.io<span class="o">)</span>?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>y
+Done.<span class="w"> </span>Your<span class="w"> </span>new<span class="w"> </span>project<span class="w"> </span>is<span class="w"> </span>available<span class="w"> </span>at<span class="w"> </span><span class="nv">$PICK_A_DIR</span>
 </code></pre></div>
 
 <p>At this point, Pelican has put new files and folders into the folder you specified (<code>$PICK_A_DIR</code>),
@@ -214,21 +215,21 @@ Articles are the main content of your site, like blog posts.
 Pages are relatively static, like &#8216;about&#8217; or &#8216;contact&#8217; pages.
 Let&#8217;s start with one of&nbsp;each.</p>
 <p>Create a file called, <code>content/cat1/test.md</code>, and give it the following&nbsp;contents:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">Test</span> <span class="n">Post</span>
-<span class="n">Date</span><span class="o">:</span> <span class="mi">1997</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">29</span> <span class="mi">02</span><span class="o">:</span><span class="mi">14</span>
-<span class="n">Tags</span><span class="o">:</span> <span class="n">testtag</span>
-<span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
-<span class="n">Summary</span><span class="o">:</span> <span class="n">This</span> <span class="k">is</span> <span class="n">an</span> <span class="n">article</span>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="n">Post</span>
+<span class="n">Date</span><span class="o">:</span><span class="w"> </span><span class="mi">1997</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">29</span><span class="w"> </span><span class="mi">02</span><span class="o">:</span><span class="mi">14</span>
+<span class="n">Tags</span><span class="o">:</span><span class="w"> </span><span class="n">testtag</span>
+<span class="n">Author</span><span class="o">:</span><span class="w"> </span><span class="n">My</span><span class="w"> </span><span class="n">Name</span>
+<span class="n">Summary</span><span class="o">:</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">article</span>
 
-<span class="s2">&quot;Hope&quot;</span> <span class="k">is</span> <span class="n">the</span> <span class="n">thing</span> <span class="k">with</span> <span class="n">feathers</span> <span class="o">-</span>
+<span class="s2">&quot;Hope&quot;</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">thing</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">feathers</span><span class="w"> </span><span class="o">-</span>
 <span class="o">...</span>
 </code></pre></div>
 
 <p>Next, create a folder, <code>content/pages/</code>, make a new file called, <code>about.md</code>, and give it the following&nbsp;contents:</p>
-<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">About</span>
-<span class="n">Author</span><span class="o">:</span> <span class="n">My</span> <span class="n">Name</span>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">About</span>
+<span class="n">Author</span><span class="o">:</span><span class="w"> </span><span class="n">My</span><span class="w"> </span><span class="n">Name</span>
 
-<span class="n">Bonjour</span><span class="o">,</span> <span class="n">wilkommen</span> <span class="n">a</span> <span class="n">kono</span> <span class="n">blog</span><span class="o">.</span>
+<span class="n">Bonjour</span><span class="o">,</span><span class="w"> </span><span class="n">wilkommen</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">kono</span><span class="w"> </span><span class="n">blog</span><span class="o">.</span>
 </code></pre></div>
 
 <p>You should, of course, eventually replace all of that with your own&nbsp;information.</p>
@@ -382,7 +383,7 @@ Check their documentation for specific&nbsp;instructions.</p>
 <p>Since I was migrating posts out of Blogger, I did this in a three-step process.
 First, I used Blogger&#8217;s <a href="https://support.google.com/blogger/answer/97416?hl=en">export <span class="caps">XML</span> functionality</a> to retrieve my content.
 Second, I ran the following command to convert the <span class="caps">XML</span> to&nbsp;Markdown.</p>
-<div class="highlight"><pre><span></span><code>pelican-import -m markdown --feed --dir-page blog___.xml --dir-cat
+<div class="highlight"><pre><span></span><code>pelican-import<span class="w"> </span>-m<span class="w"> </span>markdown<span class="w"> </span>--feed<span class="w"> </span>--dir-page<span class="w"> </span>blog___.xml<span class="w"> </span>--dir-cat
 </code></pre></div>
 
 <p>Third, I wrote a python script to do a bit of cleanup.
